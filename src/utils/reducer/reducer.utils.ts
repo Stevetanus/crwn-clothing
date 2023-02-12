@@ -37,7 +37,7 @@ export function createAction<T extends string, P>(
   payload: P
 ): ActionWithPayload<T, P>;
 
-export function createAction<T extends string, P>(
+export function createAction<T extends string>(
   type: T,
   payload: void
 ): Action<T>;
