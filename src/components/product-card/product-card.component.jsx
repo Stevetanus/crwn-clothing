@@ -5,7 +5,7 @@ import { addItemToCart } from "../../store/cart/cart.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
 // import { CartContext } from "../../contexts/cart.context";
 
-import "./product-card.styles.scss";
+import { Card } from "./product-card.styles";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
   const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
   return (
-    <div className="product-card-container">
+    <Card>
       <img src={imageUrl} alt={`${name}`} />
       <div className="footer">
         <span className="name">{name}</span>
@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
       >
         Add to card
       </Button>
-    </div>
+    </Card>
   );
 };
 
