@@ -4,12 +4,8 @@ import { useDispatch } from "react-redux";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 
-import {
-  createAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase.utils";
+import { SignUpDiv } from "./sign-up-form.styles";
 
-import "./sign-up-form.styles.scss";
 import { signUpStart } from "../../store/user/user.action";
 
 const defaultFormFields = {
@@ -55,7 +51,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpDiv>
       <h2>Don't have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
@@ -94,7 +90,7 @@ const SignUpForm = () => {
         />
         <Button type="submit">Sign up</Button>
       </form>
-    </div>
+    </SignUpDiv>
   );
 };
 
